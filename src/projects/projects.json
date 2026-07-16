@@ -1,0 +1,166 @@
+[
+	{
+		"nombre": "Plataforma de Gestión Logística y Trazabilidad de Activos",
+		"cliente": "Pampa Rental",
+		"problema": "Contratos, flota y reportes de campo se gestionaban en planillas y canales fragmentados. La operación no tenía certeza sobre disponibilidad real ni verificación documental antes de cada entrega.",
+		"solucion": "Plataforma web para centralizar alquileres, disponibilidad y auditoría visual por activo, con validaciones de negocio en backend y carga segmentada de documentación.",
+		"decision_clave": "La disponibilidad se calcula por ventanas temporales de contratos activos y no por un flag estático, evitando reservas superpuestas y estados inválidos en la flota.",
+		"resultado": "En producción activa, gestionando el alquiler de más de 20 equipos entre maquinaria pesada y vehículos de flota.",
+		"stack": [
+			"TypeScript",
+			"Next.js",
+			"Prisma",
+			"Tailwind",
+			"Node.js",
+			"Express"
+		],
+		"industria": "Logística / alquiler de maquinaria (PyME, Neuquén Capital)",
+		"industria_corta": "Logística",
+		"imagen_industria": "https://images.unsplash.com/photo-1624771002998-4aadfd43e7c4?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"imagen_interfaz": "pampa-rental.png",
+		"metricas_resultado": { "equipos_gestionados": "20+" },
+		"fecha": "2026-02-11"
+	},
+	{
+		"nombre": "Sistema de Gestión de Baños Químicos con Trazabilidad QR",
+		"cliente": "Don Fortunato",
+		"problema": "Necesitaban iniciar en una semana una operación para Techint con trazabilidad verificable por unidad, desde celulares y con conectividad irregular en campo.",
+		"solucion": "PWA mobile-first con QR único por baño, registro de limpiezas y movilizaciones con GPS, fecha, hora e historial por unidad para operación, supervisión y cliente.",
+		"decision_clave": "Persistencia offline con IndexedDB y sincronización automática contra Supabase al recuperar señal; el registro no depende de la conectividad del momento.",
+		"resultado": "En uso activo en la obra del gasoducto liderada por Techint. Más de 4.000 limpiezas y 500 movilizaciones registradas, con supervisión checkeada por unidad, generando más de 4 reportes mensuales y al menos 150 reportes diarios.",
+		"stack": ["React", "TypeScript", "Supabase", "PWA", "IndexedDB"],
+		"industria": "Servicios de campo / construcción-energía (PyME mediana, operación final en obra Techint)",
+		"industria_corta": "Energía",
+		"imagen_industria": "https://images.unsplash.com/photo-1701637783855-da67ab363cfa?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"imagen_interfaz": "toilets-safari.webp",
+		"metricas_resultado": {
+			"limpiezas": "4000+",
+			"movilizaciones": "500+",
+			"reportes_diarios": "150+"
+		},
+		"fecha": "2026-03-20"
+	},
+	{
+		"nombre": "Motor de Alertas Automatizadas para Flota y Compliance",
+		"cliente": "Pampa Rental",
+		"problema": "Vencimientos, mantenimientos y tareas críticas se seguían manualmente en hojas de cálculo, reduciendo previsibilidad, priorización e intervención temprana.",
+		"solucion": "Motor serverless que procesa fuentes operativas, aplica reglas por categoría y envía notificaciones accionables a responsables antes de que el riesgo escale.",
+		"decision_clave": "Cloud Functions orquesta el procesamiento periódico y Secret Manager resguarda credenciales; la entrega por SMTP evita mantener infraestructura propia.",
+		"resultado": "En uso activo. Centraliza las alertas operativas de la flota en un solo flujo automático, con seguimiento continuo de vencimientos y servicios, y cero tareas críticas fuera de término. Primer proyecto realizado para este cliente, que luego derivó en la plataforma de gestión logística.",
+		"stack": [
+			"Python",
+			"Google Cloud Functions",
+			"Sheets API",
+			"gspread",
+			"Pandas",
+			"Secret Manager"
+		],
+		"industria": "Logística / compliance de flota (mismo cliente que Pampa Rental)",
+		"industria_corta": "Transporte",
+		"imagen_industria": "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1400&q=80",
+		"imagen_interfaz": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80",
+		"metricas_resultado": { "tareas_fuera_de_termino": 0 },
+		"fecha": "2025-06-01"
+	},
+	{
+		"nombre": "Sistema de Gestión de Caja, Clientes y Gastos",
+		"cliente": "Carnicería Raúl",
+		"problema": "La gestión de caja, seguimiento de deudas de clientes y control de gastos se llevaba de forma completamente manual, sin sistema ni registro centralizado.",
+		"solucion": "Sistema que centraliza todo el flujo de caja, clientes, gastos y ventas en una sola plataforma fácil de usar y segura, eliminando el registro manual disperso.",
+		"decision_clave": "Arquitectura con separación de responsabilidades (Services, Repositories), validaciones con Zod combinando tipos inferidos con DTOs basados en clases, manejo de errores centralizado, y desarrollo guiado por pruebas (TDD) con testing unitario e integral.",
+		"resultado": "En uso desde junio de 2026, controlando la caja diaria del negocio todos los días desde el lanzamiento, sin presentar fallos hasta la fecha.",
+		"stack": ["TypeScript", "Express", "PostgreSQL", "Vitest", "Zod"],
+		"industria": "Comercio minorista / gastronomía (General Alvear, Mendoza — negocio familiar del equipo)",
+		"industria_corta": "Comercio",
+		"imagen_industria": "https://images.unsplash.com/photo-1599834255434-c137726a0637?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"imagen_interfaz": "carniceria.png",
+		"metricas_resultado": {},
+		"fecha": "2026-06-01"
+	},
+	{
+		"nombre": "Plataforma de Grabación y Repeticiones para Complejos Deportivos",
+		"cliente": "Tu Repe",
+		"problema": "Los complejos deportivos suelen tener cámaras, pero los jugadores casi nunca acceden solos a las grabaciones de sus partidos. El club depende de procesos manuales y el jugador no tiene una forma simple de recuperar su partido.",
+		"solucion": "Plataforma B2B2C que graba partidos de forma automática según el horario del club, los guarda en la nube y permite a los jugadores buscar, ver, clippear y descargar repeticiones sin registrarse, con paneles para operadores y dueños de club.",
+		"decision_clave": "Se modeló el 'turno' por fecha, hora y duración configurable sin integrar un sistema de reservas: el jugador encuentra su partido por cancha y ventana temporal, mientras un pipeline RTSP→ffmpeg→B2 opera en automático con reintentos ante fallos.",
+		"resultado": "Producto SaaS propio en operación: grabación diaria sin intervención manual, experiencia pública sin fricción para jugadores y onboarding multi-club con branding white-label por complejo.",
+		"stack": [
+			"TypeScript",
+			"React 19",
+			"Vite",
+			"Zustand",
+			"Node.js",
+			"Express",
+			"MySQL",
+			"FFmpeg",
+			"Backblaze B2",
+			"Cloudinary",
+			"JWT",
+			"Docker",
+			"Jest"
+		],
+		"industria": "SaaS deportivo / complejos y clubes (producto propio Aedes)",
+		"industria_corta": "Deporte",
+		"imagen_industria": "https://images.unsplash.com/photo-1526888935184-a82d2a4b7e67?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"imagen_interfaz": "tu-repe-safari.webp",
+		"metricas_resultado": {
+			"endpoints_api": 45,
+			"archivos_test": 50,
+			"migraciones_sql": 34
+		},
+		"fecha": "2026-06-15"
+	},
+	{
+		"nombre": "Sistema Integral de Gestión de Liga Municipal de Básquet",
+		"cliente": "Liga Alvearense de Básquet",
+		"problema": "Gestión manual/en papel y en hojas de cálculo sueltas: planillas físicas de partido, cálculo manual de posiciones y estadísticas, sin fuente única de verdad para categorías ni traspasos de jugadores, y sin forma de publicar resultados en tiempo real.",
+		"solucion": "Sistema integral que cubre catálogo de clubes/categorías/jugadores con historial de traspasos, inscripciones con validación de elegibilidad, generación transaccional de fixtures y brackets de playoff, planillaje de partidos en vivo, cálculo automático de estadísticas y posiciones, y portal público sin login.",
+		"decision_clave": "Backend Express como única autoridad de reglas de negocio (Supabase reducido a Postgres/Auth/Storage, validado en CI). Planillaje por token sin necesidad de cuenta, con frontend offline-first (Zustand + Dexie) que sincroniza eventos idempotentes. Auditoría append-only de toda operación crítica. Transaccionalidad que bloquea regenerar un fixture con partidos en curso.",
+		"resultado": "En uso activo, planillando más de 10 partidos por semana, con 4 torneos simultáneos, 6 o más equipos por torneo, y equipos de más de 50 jugadores cada uno. El proyecto de mayor escala y complejidad hasta ahora.",
+		"stack": [
+			"React 19",
+			"TypeScript",
+			"Vite",
+			"React Router 7",
+			"React Query",
+			"Tailwind",
+			"Zustand",
+			"Dexie/IndexedDB",
+			"Express",
+			"Zod",
+			"Prisma",
+			"Supabase",
+			"Vitest",
+			"Supertest"
+		],
+		"industria": "Gestión deportiva / entidades municipales",
+		"industria_corta": "Deporte",
+		"imagen_industria": "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1400&q=80",
+		"imagen_interfaz": "lmb.png",
+		"metricas_resultado": {
+			"partidos_semanales": "10+",
+			"torneos_simultaneos": 4,
+			"equipos_por_torneo": "6+",
+			"jugadores_por_equipo": "50+"
+		},
+		"fecha": "2026-07-08"
+	},
+	{
+		"nombre": "Sistema de Gestión de Turnos para Profesionales",
+		"cliente": "Clínica de la visión",
+		"problema": "Cada profesional tenía su propia secretaria dedicada, con turnos gestionados en Excel de forma manual y dispersa, sin comprobante automático ni panel centralizado.",
+		"solucion": "Panel intuitivo donde los pacientes agendan turnos directamente dentro de la agenda de cada profesional, con descarga automática de comprobante al reservar, reemplazando la gestión en Excel.",
+		"decision_clave": "Desarrollo enfocado en resolver bien el problema puntual, integrando una librería de calendario existente en vez de construir un sistema de agenda desde cero.",
+		"resultado": "La clínica pasó de necesitar 3 secretarias a solo 1 recepcionista para todos los profesionales. En uso activo desde el lanzamiento.",
+		"stack": ["React", "Express", "Node.js", "MySQL"],
+		"industria": "Salud / clínicas (PyME)",
+		"industria_corta": "Clínicas",
+		"imagen_industria": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1400&q=80",
+		"imagen_interfaz": "bookify-safari.webp",
+		"metricas_resultado": {
+			"secretarias_antes": 3,
+			"secretarias_despues": 1
+		},
+		"fecha": "2025-03-01"
+	}
+]

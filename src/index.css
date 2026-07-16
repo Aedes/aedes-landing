@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+	--bg: #ffffff;
+	--text: #0a0a0a;
+	--muted: #6b6b6b;
+	--button-bg: #0a0a0a;
+	--button-text: #ffffff;
+	--border-soft: rgba(0, 0, 0, 0.08);
+	--green: #17c964;
+	--brand: #e2261c;
+}
+
+@layer base {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	html {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	body {
+		margin: 0;
+		font-family: "Inter", system-ui, sans-serif;
+		background-color: var(--bg);
+		color: var(--text);
+		letter-spacing: -0.02em;
+	}
+
+	/* Rojo bajo el hero mientras TrustedBy sube en la intro */
+	main {
+		background-color: var(--brand);
+		overflow-x: clip;
+	}
+}
+
+@keyframes marquee-left {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+@keyframes line-pulse {
+	0% {
+		opacity: 0;
+		transform: scale(1);
+	}
+	15% {
+		opacity: 0.9;
+	}
+	70% {
+		opacity: 0.4;
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0.85);
+	}
+}

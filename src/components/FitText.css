@@ -1,0 +1,21 @@
+@layer components {
+	.fit-text {
+		width: 100%;
+		overflow-x: clip;
+		overflow-y: visible;
+	}
+
+	.fit-text__inner {
+		margin: 0;
+		width: max-content;
+		max-width: 100%;
+		margin-inline: auto;
+		white-space: nowrap;
+		font-family: "Inter", sans-serif;
+		font-weight: 600;
+		letter-spacing: -0.07em;
+		line-height: 1;
+		padding-top: 0.1em;
+		color: #ffffff;
+	}
+}
