@@ -1,6 +1,5 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-import { INTRO_EASE } from "../intro";
 import type { Project } from "../projects/types";
 
 type ProjectCardProps = {
@@ -9,7 +8,6 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
 	const mediaRef = useRef<HTMLDivElement>(null);
-	const [hovered, setHovered] = useState(false);
 
 	const { scrollYProgress } = useScroll({
 		target: mediaRef,
@@ -18,11 +16,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 	const industryY = useTransform(scrollYProgress, [0, 1], ["-28%", "28%"]);
 
 	return (
-		<article
-			className="project-card"
-			onMouseEnter={() => setHovered(true)}
-			onMouseLeave={() => setHovered(false)}
-		>
+		<article className="project-card">
 			<div ref={mediaRef} className="project-card__media">
 				<motion.img
 					src={project.imagen_industria}
@@ -32,34 +26,20 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 					draggable={false}
 				/>
 
-				<motion.div
-					className="project-card__dim"
-					initial={false}
-					animate={{ opacity: hovered ? 1 : 0 }}
-					transition={{ duration: 0.45, ease: INTRO_EASE }}
-				/>
+				<div className="project-card__dim" aria-hidden="true" />
 
 				<span className="project-card__industry-tag">
 					{project.industria_corta}
 				</span>
 
-				<motion.div
-					className="project-card__ui"
-					initial={false}
-					animate={
-						hovered
-							? { x: "-50%", y: "-50%", opacity: 1 }
-							: { x: "-50%", y: "55%", opacity: 0 }
-					}
-					transition={{ duration: 0.55, ease: INTRO_EASE }}
-				>
+				<div className="project-card__ui">
 					<img
 						src={project.imagen_interfaz}
 						alt={`Interfaz de ${project.nombre}`}
 						className="project-card__ui-image"
 						draggable={false}
 					/>
-				</motion.div>
+				</div>
 			</div>
 
 			<div className="project-card__copy">

@@ -66,6 +66,7 @@ export default function HowWeWork() {
 	return (
 		<section
 			ref={sectionRef}
+			id="como-trabajamos"
 			className="how-we-work"
 			data-navbar-theme="light"
 		>

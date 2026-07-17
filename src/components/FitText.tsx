@@ -4,9 +4,14 @@ import "./FitText.css";
 type FitTextProps = {
 	children: string;
 	className?: string;
+	maxSize?: number;
 };
 
-export default function FitText({ children, className = "" }: FitTextProps) {
+export default function FitText({
+	children,
+	className = "",
+	maxSize = 600,
+}: FitTextProps) {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const textRef = useRef<HTMLParagraphElement>(null);
 
@@ -19,7 +24,7 @@ export default function FitText({ children, className = "" }: FitTextProps) {
 		if (maxWidth === 0) return;
 
 		let min = 8;
-		let max = 600;
+		let max = maxSize;
 
 		while (min < max) {
 			const mid = Math.ceil((min + max) / 2);
@@ -33,7 +38,7 @@ export default function FitText({ children, className = "" }: FitTextProps) {
 		}
 
 		text.style.fontSize = `${max}px`;
-	}, []);
+	}, [maxSize]);
 
 	useEffect(() => {
 		fit();

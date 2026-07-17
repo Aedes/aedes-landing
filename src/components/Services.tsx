@@ -29,7 +29,7 @@ const SERVICES = [
 	{
 		title: "Apps mobile",
 		description:
-			"Apps nativas o multiplataforma para que tu producto o operación viajen con el usuario: performance, usabilidad y una experiencia sólida en el bolsillo.",
+			"Apps nativas o multiplataforma para que tu producto u operación viajen con el usuario: performance, usabilidad y una experiencia sólida en el bolsillo.",
 	},
 	{
 		title: "Desarrollo de API's",
@@ -128,6 +128,7 @@ export default function Services() {
 	return (
 		<section
 			ref={sectionRef}
+			id="servicios"
 			className="services"
 			data-navbar-theme="dark"
 			style={{ "--services-count": SERVICES.length } as CSSProperties}

@@ -48,6 +48,10 @@ export default function SmoothScroll({ children }: SmoothScrollProps) {
 					smoothWheel: true,
 					wheelMultiplier: 0.75,
 					touchMultiplier: 1.1,
+					anchors: {
+						// Compensa la navbar fija al saltar a secciones
+						offset: -80,
+					},
 				}}
 			/>
 			{children}

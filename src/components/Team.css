@@ -1,0 +1,140 @@
+@layer components {
+	.team {
+		position: relative;
+		z-index: 1;
+		padding: clamp(24px, 4vh, 48px) clamp(16px, 2.5vw, 40px)
+			clamp(80px, 12vh, 140px);
+		background-color: #0a0a0a;
+		color: #ffffff;
+		overflow: hidden;
+	}
+
+	.team__title {
+		margin: 0 0 clamp(36px, 5vh, 56px);
+		font-family: "Inter", sans-serif;
+		font-size: clamp(13px, 1.2vw, 14px);
+		font-weight: 600;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.55);
+	}
+
+	.team__members {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: clamp(28px, 4vw, 48px);
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.team__member {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.team__photo-wrap {
+		position: relative;
+		aspect-ratio: 4 / 5;
+		overflow: hidden;
+		margin-bottom: 8px;
+		background: #141414;
+	}
+
+	.team__photo-wrap::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 40px;
+		height: 2px;
+		background: var(--brand);
+	}
+
+	.team__photo {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center top;
+		filter: grayscale(1);
+		transition: filter 0.45s ease, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+
+	@media (hover: hover) {
+		.team__member:hover .team__photo {
+			filter: grayscale(0);
+			transform: scale(1.03);
+		}
+	}
+
+	.team__number {
+		font-family: "Inter", sans-serif;
+		font-size: 13px;
+		font-weight: 600;
+		letter-spacing: -0.02em;
+		font-variant-numeric: tabular-nums;
+		color: var(--brand);
+	}
+
+	.team__name {
+		margin: 0;
+		font-family: "Inter", sans-serif;
+		font-size: clamp(1.25rem, 2vw, 1.6rem);
+		font-weight: 600;
+		letter-spacing: -0.045em;
+		line-height: 1.15;
+		color: #ffffff;
+	}
+
+	.team__role {
+		margin: 0;
+		font-family: "Inter", sans-serif;
+		font-size: clamp(13px, 1.25vw, 14px);
+		font-weight: 500;
+		letter-spacing: -0.02em;
+		line-height: 1.35;
+		color: rgba(255, 255, 255, 0.72);
+	}
+
+	.team__bio {
+		margin: 0;
+		font-family: "Inter", sans-serif;
+		font-size: clamp(14px, 1.35vw, 16px);
+		font-weight: 400;
+		line-height: 1.55;
+		letter-spacing: -0.025em;
+		color: rgba(255, 255, 255, 0.58);
+	}
+
+	.team__linkedin {
+		margin-top: 4px;
+		align-self: flex-start;
+		font-family: "Inter", sans-serif;
+		font-size: 13px;
+		font-weight: 500;
+		letter-spacing: -0.02em;
+		color: rgba(255, 255, 255, 0.72);
+		text-decoration: none;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+		padding-bottom: 1px;
+		transition:
+			color 0.25s ease,
+			border-color 0.25s ease;
+	}
+
+	.team__linkedin:hover {
+		color: var(--brand);
+		border-color: var(--brand);
+	}
+
+	@media (max-width: 900px) {
+		.team__members {
+			grid-template-columns: 1fr;
+			gap: 40px;
+			max-width: 420px;
+		}
+	}
+}

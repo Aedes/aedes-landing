@@ -137,7 +137,6 @@
 		aspect-ratio: 16 / 10;
 		overflow: hidden;
 		background: #111;
-		cursor: pointer;
 	}
 
 	.project-card__industry {
@@ -187,6 +186,7 @@
 		box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
 		pointer-events: none;
 		border-radius: 2px;
+		transform: translate(-50%, -50%);
 	}
 
 	.project-card__ui-image {

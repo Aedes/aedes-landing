@@ -3,9 +3,15 @@ import { motion } from "motion/react";
 import { ChevronUp } from "lucide-react";
 import Logo from "./Logo";
 import { INTRO_REST_DELAY } from "../intro";
+import { WHATSAPP_URL } from "../whatsapp";
 import "./Navbar.css";
 
-const NAV_LINKS = ["Servicios", "Proyectos", "Equipo", "FAQs", "Contacto"];
+const NAV_LINKS = [
+	{ label: "Servicios", href: "#servicios" },
+	{ label: "Proyectos", href: "#proyectos" },
+	{ label: "Equipo", href: "#equipo" },
+	{ label: "Contacto", href: "#contacto" },
+] as const;
 
 type NavbarTheme = "on-light" | "on-dark";
 
@@ -142,12 +148,12 @@ export default function Navbar() {
 					>
 						{NAV_LINKS.map((link) => (
 							<motion.a
-								key={link}
-								href="#"
+								key={link.href}
+								href={link.href}
 								className="navbar__link"
 								variants={itemVariants}
 							>
-								{link}
+								{link.label}
 							</motion.a>
 						))}
 					</motion.nav>
@@ -156,7 +162,12 @@ export default function Navbar() {
 						className="navbar__actions"
 						variants={itemVariants}
 					>
-						<a href="#" className="navbar__cta">
+						<a
+							href={WHATSAPP_URL}
+							className="navbar__cta"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							Hablemos de tu proyecto
 						</a>
 
@@ -181,18 +192,20 @@ export default function Navbar() {
 				<nav className="drawer-overlay__nav">
 					{NAV_LINKS.map((link) => (
 						<a
-							key={link}
-							href="#"
+							key={link.href}
+							href={link.href}
 							className="drawer-overlay__link"
 							onClick={() => setMenuOpen(false)}
 						>
-							{link}
+							{link.label}
 						</a>
 					))}
 				</nav>
 				<a
-					href="#"
+					href={WHATSAPP_URL}
 					className="drawer-overlay__cta"
+					target="_blank"
+					rel="noopener noreferrer"
 					onClick={() => setMenuOpen(false)}
 				>
 					Hablemos de tu proyecto

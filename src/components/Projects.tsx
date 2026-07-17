@@ -16,6 +16,7 @@ import toiletsSafari from "../assets/toilets-safari.webp";
 import pampaRentalSafari from "../assets/pampa-rental.png";
 import lmbSafari from "../assets/lmb.png";
 import carniceriaSafari from "../assets/carniceria.png";
+import rentalAlertasSafari from "../assets/rental-alertas.png";
 import ProjectCard from "./ProjectCard";
 import "./Projects.css";
 
@@ -24,6 +25,7 @@ const LOCAL_UI_IMAGES: Record<string, string> = {
 	"bookify-safari.webp": bookifySafari,
 	"toilets-safari.webp": toiletsSafari,
 	"pampa-rental.png": pampaRentalSafari,
+	"rental-alertas.png": rentalAlertasSafari,
 	"lmb.png": lmbSafari,
 	"carniceria.png": carniceriaSafari,
 };
@@ -105,7 +107,7 @@ export default function Projects() {
 	}, [isInView]);
 
 	return (
-		<section className="projects" data-navbar-theme="dark">
+		<section id="proyectos" className="projects" data-navbar-theme="dark">
 			<div ref={introRef} className="projects__intro">
 				<div className="projects__sticky">
 					<div className="projects__stage">

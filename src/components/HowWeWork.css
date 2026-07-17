@@ -3,7 +3,7 @@
 		position: relative;
 		z-index: 1;
 		padding: clamp(64px, 10vh, 120px) clamp(16px, 2.5vw, 40px)
-			clamp(80px, 12vh, 140px);
+			clamp(48px, 7vh, 72px);
 		background-color: #0a0a0a;
 		color: #ffffff;
 		overflow: hidden;

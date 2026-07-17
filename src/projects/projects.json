@@ -41,28 +41,6 @@
 		"fecha": "2026-03-20"
 	},
 	{
-		"nombre": "Motor de Alertas Automatizadas para Flota y Compliance",
-		"cliente": "Pampa Rental",
-		"problema": "Vencimientos, mantenimientos y tareas críticas se seguían manualmente en hojas de cálculo, reduciendo previsibilidad, priorización e intervención temprana.",
-		"solucion": "Motor serverless que procesa fuentes operativas, aplica reglas por categoría y envía notificaciones accionables a responsables antes de que el riesgo escale.",
-		"decision_clave": "Cloud Functions orquesta el procesamiento periódico y Secret Manager resguarda credenciales; la entrega por SMTP evita mantener infraestructura propia.",
-		"resultado": "En uso activo. Centraliza las alertas operativas de la flota en un solo flujo automático, con seguimiento continuo de vencimientos y servicios, y cero tareas críticas fuera de término. Primer proyecto realizado para este cliente, que luego derivó en la plataforma de gestión logística.",
-		"stack": [
-			"Python",
-			"Google Cloud Functions",
-			"Sheets API",
-			"gspread",
-			"Pandas",
-			"Secret Manager"
-		],
-		"industria": "Logística / compliance de flota (mismo cliente que Pampa Rental)",
-		"industria_corta": "Transporte",
-		"imagen_industria": "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1400&q=80",
-		"imagen_interfaz": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80",
-		"metricas_resultado": { "tareas_fuera_de_termino": 0 },
-		"fecha": "2025-06-01"
-	},
-	{
 		"nombre": "Sistema de Gestión de Caja, Clientes y Gastos",
 		"cliente": "Carnicería Raúl",
 		"problema": "La gestión de caja, seguimiento de deudas de clientes y control de gastos se llevaba de forma completamente manual, sin sistema ni registro centralizado.",
@@ -162,5 +140,27 @@
 			"secretarias_despues": 1
 		},
 		"fecha": "2025-03-01"
+	},
+	{
+		"nombre": "Motor de Alertas Automatizadas para Flota y Compliance",
+		"cliente": "Pampa Rental",
+		"problema": "Vencimientos, mantenimientos y tareas críticas se seguían manualmente en hojas de cálculo, reduciendo previsibilidad, priorización e intervención temprana.",
+		"solucion": "Motor serverless que procesa fuentes operativas, aplica reglas por categoría y envía notificaciones accionables a responsables antes de que el riesgo escale.",
+		"decision_clave": "Cloud Functions orquesta el procesamiento periódico y Secret Manager resguarda credenciales; la entrega por SMTP evita mantener infraestructura propia.",
+		"resultado": "En uso activo. Centraliza las alertas operativas de la flota en un solo flujo automático, con seguimiento continuo de vencimientos y servicios, y cero tareas críticas fuera de término. Primer proyecto realizado para este cliente, que luego derivó en la plataforma de gestión logística.",
+		"stack": [
+			"Python",
+			"Google Cloud Functions",
+			"Sheets API",
+			"gspread",
+			"Pandas",
+			"Secret Manager"
+		],
+		"industria": "Logística / compliance de flota (mismo cliente que Pampa Rental)",
+		"industria_corta": "Transporte",
+		"imagen_industria": "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1400&q=80",
+		"imagen_interfaz": "rental-alertas.png",
+		"metricas_resultado": { "tareas_fuera_de_termino": 0 },
+		"fecha": "2025-06-01"
 	}
 ]
