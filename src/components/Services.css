@@ -135,8 +135,10 @@
 		}
 
 		.services__sticky {
-			align-items: flex-start;
-			padding-top: clamp(72px, 12vh, 120px);
+			align-items: center;
+			/* Más padding arriba que abajo para compensar la navbar fija */
+			padding-top: clamp(96px, 16vh, 140px);
+			padding-bottom: clamp(40px, 8vh, 72px);
 		}
 
 		.services__title {
@@ -163,8 +165,8 @@
 
 	@media (max-height: 780px) {
 		.services__sticky {
-			padding-top: 64px;
-			padding-bottom: 40px;
+			padding-top: clamp(88px, 14vh, 120px);
+			padding-bottom: clamp(32px, 6vh, 56px);
 		}
 
 		.services__title {

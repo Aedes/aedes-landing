@@ -11,6 +11,8 @@ export const INTRO_REST_DELAY = 0.95;
 /**
  * Título (AedesTech) + TrustedBy suben juntos.
  * Mismo offset en px (no %) para que el par se mantenga pegado.
+ * Valor alto para ocultar por completo ascendentes (A, T) en monitores anchos
+ * donde FitText escala las letras por encima de ~350px.
  */
-export const INTRO_BOTTOM_Y = 350;
+export const INTRO_BOTTOM_Y = 620;
 export const INTRO_BOTTOM_DURATION = 0.95;
