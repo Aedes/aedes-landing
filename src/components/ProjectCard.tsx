@@ -55,6 +55,16 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 						<li key={tech}>{tech}</li>
 					))}
 				</ul>
+				{project.url ? (
+					<a
+						href={project.url}
+						className="project-card__link"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Visitar sitio
+					</a>
+				) : null}
 			</div>
 		</article>
 	);

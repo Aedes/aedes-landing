@@ -310,10 +310,6 @@
 	}
 
 	@media (max-width: 810px) {
-		.hero {
-			min-height: 100svh;
-		}
-
 		.hero::before {
 			transform: rotate(90deg) scale(1.5);
 			transform-origin: center center;

@@ -2,7 +2,7 @@
 	.team {
 		position: relative;
 		z-index: 1;
-		padding: clamp(24px, 4vh, 48px) clamp(16px, 2.5vw, 40px)
+		padding: clamp(24px, 4vh, 48px) clamp(16px, 4vw, 40px)
 			clamp(80px, 12vh, 140px);
 		background-color: #0a0a0a;
 		color: #ffffff;
@@ -24,6 +24,8 @@
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: clamp(28px, 4vw, 48px);
 		list-style: none;
+		width: 100%;
+		max-width: 100%;
 		margin: 0;
 		padding: 0;
 	}
@@ -33,10 +35,14 @@
 		display: flex;
 		flex-direction: column;
 		gap: 12px;
+		min-width: 0;
+		width: 100%;
 	}
 
 	.team__photo-wrap {
 		position: relative;
+		width: 100%;
+		max-width: 100%;
 		aspect-ratio: 4 / 5;
 		overflow: hidden;
 		margin-bottom: 8px;
@@ -57,10 +63,13 @@
 		display: block;
 		width: 100%;
 		height: 100%;
+		max-width: 100%;
 		object-fit: cover;
 		object-position: center top;
 		filter: grayscale(1);
-		transition: filter 0.45s ease, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+		transition:
+			filter 0.45s ease,
+			transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 	}
 
 	@media (hover: hover) {
@@ -87,6 +96,7 @@
 		letter-spacing: -0.045em;
 		line-height: 1.15;
 		color: #ffffff;
+		overflow-wrap: break-word;
 	}
 
 	.team__role {
@@ -97,6 +107,7 @@
 		letter-spacing: -0.02em;
 		line-height: 1.35;
 		color: rgba(255, 255, 255, 0.72);
+		overflow-wrap: break-word;
 	}
 
 	.team__bio {
@@ -107,6 +118,7 @@
 		line-height: 1.55;
 		letter-spacing: -0.025em;
 		color: rgba(255, 255, 255, 0.58);
+		overflow-wrap: break-word;
 	}
 
 	.team__linkedin {
@@ -130,11 +142,23 @@
 		border-color: var(--brand);
 	}
 
-	@media (max-width: 900px) {
+	@media (max-width: 1024px) {
 		.team__members {
 			grid-template-columns: 1fr;
-			gap: 40px;
-			max-width: 420px;
+			justify-items: stretch;
+			gap: clamp(36px, 6vh, 48px);
+			width: min(100%, 420px);
+			margin-inline: auto;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.team__members {
+			width: 100%;
+		}
+
+		.team__name {
+			font-size: clamp(1.15rem, 6vw, 1.35rem);
 		}
 	}
 }

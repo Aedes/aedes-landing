@@ -86,7 +86,8 @@
 			"archivos_test": 50,
 			"migraciones_sql": 34
 		},
-		"fecha": "2026-06-15"
+		"fecha": "2026-06-15",
+		"url": "https://turepe.aedestec.com"
 	},
 	{
 		"nombre": "Sistema Integral de Gestión de Liga Municipal de Básquet",
@@ -139,7 +140,8 @@
 			"secretarias_antes": 3,
 			"secretarias_despues": 1
 		},
-		"fecha": "2025-03-01"
+		"fecha": "2025-03-01",
+		"url": "https://www.bookify.aedestec.com"
 	},
 	{
 		"nombre": "Motor de Alertas Automatizadas para Flota y Compliance",

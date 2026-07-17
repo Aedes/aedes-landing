@@ -12,4 +12,5 @@ export type Project = {
 	imagen_interfaz: string;
 	metricas_resultado: Record<string, string | number>;
 	fecha: string;
+	url?: string;
 };

@@ -167,15 +167,15 @@ export default function BuildTogether() {
 								“
 							</motion.span>
 							<motion.blockquote variants={itemVariants}>
-								Un equipo que entiende el negocio antes de
-								escribir código, y entrega software que la
-								operación realmente usa todos los días.
+								Gente con la que da gusto trabajar, siempre
+								atentos y predispuestos a ayudar. Realmente
+								sentís que quieren que te vaya bien.
 							</motion.blockquote>
 							<motion.figcaption variants={itemVariants}>
 								<span className="build-together__quote-dash">
 									—
 								</span>{" "}
-								Cliente ejemplo
+								Don Fortunato
 							</motion.figcaption>
 						</figure>
 					</motion.div>
