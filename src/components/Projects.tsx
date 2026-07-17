@@ -13,10 +13,10 @@ import type { Project } from "../projects/types";
 import tuRepeSafari from "../assets/tu-repe-safari.webp";
 import bookifySafari from "../assets/bookify-safari.webp";
 import toiletsSafari from "../assets/toilets-safari.webp";
-import pampaRentalSafari from "../assets/pampa-rental.png";
-import lmbSafari from "../assets/lmb.png";
-import carniceriaSafari from "../assets/carniceria.png";
-import rentalAlertasSafari from "../assets/rental-alertas.png";
+import pampaRentalSafari from "../assets/pampa-rental.webp";
+import lmbSafari from "../assets/lmb.webp";
+import carniceriaSafari from "../assets/carniceria.webp";
+import rentalAlertasSafari from "../assets/rental-alertas.webp";
 import ProjectCard from "./ProjectCard";
 import "./Projects.css";
 
@@ -24,10 +24,10 @@ const LOCAL_UI_IMAGES: Record<string, string> = {
 	"tu-repe-safari.webp": tuRepeSafari,
 	"bookify-safari.webp": bookifySafari,
 	"toilets-safari.webp": toiletsSafari,
-	"pampa-rental.png": pampaRentalSafari,
-	"rental-alertas.png": rentalAlertasSafari,
-	"lmb.png": lmbSafari,
-	"carniceria.png": carniceriaSafari,
+	"pampa-rental.webp": pampaRentalSafari,
+	"rental-alertas.webp": rentalAlertasSafari,
+	"lmb.webp": lmbSafari,
+	"carniceria.webp": carniceriaSafari,
 };
 
 const PROJECTS = (projectsData as Project[]).map((project) => ({

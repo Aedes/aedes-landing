@@ -3,7 +3,7 @@ import { motion, useInView, useScroll, useTransform } from "motion/react";
 import { INTRO_EASE } from "../intro";
 import { WHATSAPP_URL } from "../whatsapp";
 import projects from "../projects/projects.json";
-import fondo from "../assets/fondo.jpg";
+import fondo from "../assets/fondo.webp";
 import "./BuildTogether.css";
 
 const TITLE_LINES: {

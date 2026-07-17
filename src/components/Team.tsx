@@ -1,9 +1,9 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { INTRO_EASE } from "../intro";
-import valentino from "../assets/valentino.png";
-import faustino from "../assets/faustino.png";
-import ignacio from "../assets/ignacio.png";
+import valentino from "../assets/valentino.webp";
+import faustino from "../assets/faustino.webp";
+import ignacio from "../assets/ignacio.webp";
 import "./Team.css";
 
 const MEMBERS = [
@@ -12,7 +12,7 @@ const MEMBERS = [
 		name: "Valentino Araya",
 		role: "Co-fundador · Full Stack",
 		bio: "Diseño, desarrollo y despliegue end-to-end: del backend a la experiencia usuario, siempre en contacto con quienes usan el sistema.",
-		image: "valentino.png",
+		image: "valentino.webp",
 		linkedin: "https://www.linkedin.com/in/valentinoaraya/",
 	},
 	{
@@ -20,7 +20,7 @@ const MEMBERS = [
 		name: "Faustino Durán",
 		role: "Co-fundador · Full Stack",
 		bio: "Full stack en todas las etapas: desde entrevistas y definición de requisitos hasta código en producción, con foco en resolver el problema real.",
-		image: "faustino.png",
+		image: "faustino.webp",
 		linkedin: "https://www.linkedin.com/in/faustino-duran-a8b17a273/",
 	},
 	{
@@ -28,16 +28,16 @@ const MEMBERS = [
 		name: "Ignacio Patiño",
 		role: "Co-fundador · Full Stack",
 		bio: "Construcción de sistemas robustos y usables, integrando diseño, frontend y backend para entregar producto terminado y mantenible.",
-		image: "ignacio.png",
+		image: "ignacio.webp",
 		linkedin:
 			"https://www.linkedin.com/in/ignacio-patiño-851701160/",
 	},
 ] as const;
 
 const LOCAL_UI_IMAGES: Record<string, string> = {
-	"valentino.png": valentino,
-	"faustino.png": faustino,
-	"ignacio.png": ignacio,
+	"valentino.webp": valentino,
+	"faustino.webp": faustino,
+	"ignacio.webp": ignacio,
 };
 
 const titleVariants = {

@@ -17,7 +17,7 @@
 		"industria": "Logística / alquiler de maquinaria (PyME, Neuquén Capital)",
 		"industria_corta": "Logística",
 		"imagen_industria": "https://images.unsplash.com/photo-1624771002998-4aadfd43e7c4?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-		"imagen_interfaz": "pampa-rental.png",
+		"imagen_interfaz": "pampa-rental.webp",
 		"metricas_resultado": { "equipos_gestionados": "20+" },
 		"fecha": "2026-02-11"
 	},
@@ -51,7 +51,7 @@
 		"industria": "Comercio minorista / gastronomía (General Alvear, Mendoza — negocio familiar del equipo)",
 		"industria_corta": "Comercio",
 		"imagen_industria": "https://images.unsplash.com/photo-1599834255434-c137726a0637?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-		"imagen_interfaz": "carniceria.png",
+		"imagen_interfaz": "carniceria.webp",
 		"metricas_resultado": {},
 		"fecha": "2026-06-01"
 	},
@@ -115,7 +115,7 @@
 		"industria": "Gestión deportiva / entidades municipales",
 		"industria_corta": "Deporte",
 		"imagen_industria": "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1400&q=80",
-		"imagen_interfaz": "lmb.png",
+		"imagen_interfaz": "lmb.webp",
 		"metricas_resultado": {
 			"partidos_semanales": "10+",
 			"torneos_simultaneos": 4,
@@ -161,7 +161,7 @@
 		"industria": "Logística / compliance de flota (mismo cliente que Pampa Rental)",
 		"industria_corta": "Transporte",
 		"imagen_industria": "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1400&q=80",
-		"imagen_interfaz": "rental-alertas.png",
+		"imagen_interfaz": "rental-alertas.webp",
 		"metricas_resultado": { "tareas_fuera_de_termino": 0 },
 		"fecha": "2025-06-01"
 	}
